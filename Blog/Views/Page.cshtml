@@ -1,0 +1,10 @@
+@model Blog.Models.Post
+@{
+    Layout = "_Layout";
+}
+
+    <div class="fh5co-narrow-content">
+        <h2>@Model.Name</h2>
+
+        @Html.Raw(Markdig.Markdown.ToHtml(Model.Content))
+    </div>
